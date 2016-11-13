@@ -8,7 +8,7 @@ namespace SWTest.Data.Context
         public EntityContext()
             : base("DBConnection")
         {
-            DbConfiguration.SetConfiguration(null);
+            Database.SetInitializer<EntityContext>(null);
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
