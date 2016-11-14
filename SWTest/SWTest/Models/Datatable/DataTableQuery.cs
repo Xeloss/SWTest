@@ -13,6 +13,5 @@ namespace SWTest.Models.Datatable
         public int iDisplayLength { get; set; }
 
         public string sSearch { get; set; }
-        public bool bRegex { get; set; }
     }
 }

@@ -2,17 +2,19 @@
 using SWTest.Data.Entities;
 using SWTest.Data.Repositories;
 using SWTest.Models.Datatable;
+using SWTest.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.UI;
 
 namespace SWTest.Controllers
 {
     public class EventController : Controller
     {
-        [OutputCache(CacheProfile = "CacheEvents")]
+        [OutputCacheProfile("CacheEvents")]
         public JsonResult List(DataTableQuery query)
         {
             using (var repository = new Repository<Event>())
