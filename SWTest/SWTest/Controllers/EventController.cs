@@ -35,7 +35,7 @@ namespace SWTest.Controllers
                 result = result.Skip(query.iDisplayStart)
                                .Take(query.iDisplayLength);
 
-                return Json(new DataTableResponse<Event>(result.ToList(), total, filtered, query.sEcho), JsonRequestBehavior.AllowGet);
+                return Json(new DataTableResponse<Event>(result.ToList(), total, filtered), JsonRequestBehavior.AllowGet);
             }
         }
     }
